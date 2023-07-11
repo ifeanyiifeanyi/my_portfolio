@@ -1,5 +1,35 @@
+@import "https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap";
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:after, :before {
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
 body {
-  background-color: red;
+  -webkit-font-smoothing: antialiased;
+  font-family: Poppins, sans-serif;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+button, input, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+img, video, canvas, svg {
+  max-width: 100%;
 }
 
 /*# sourceMappingURL=index.e06a7e20.css.map */
