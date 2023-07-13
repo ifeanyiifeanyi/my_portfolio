@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Aldrich&display=swap');
+@import './base.scss';
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: 100;
+    background: radial-gradient(circle at -8.9% 51.2%, #020024 0%, #090979 15.9%, #0b07e2 15.9%, #00000c 24.4%, #0b134f 24.5%, #0b134f 66%);
+    display: grid;
+    place-items: center;
+    font-family: 'Aldrich', sans-serif;
+
+    &__box {
+        position: relative;
+        width: 500px;
+        height: 200px;
+        border: 3px solid $green-one;
+        border-top: 3px solid $green-two;
+        border-bottom: 3px solid $green-three;
+    }
+
+    &__bar {
+        width: 90%;
+        height: 10px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #ccc;
+        border-radius: 2px;
+
+        &--inner {
+            height: 100%;
+            width: 50%;
+            border-radius: 2px;
+            background-color: $green-four;
+        }
+    }
+
+    &__text {
+        position: relative;
+        padding: 1rem;
+        font-size: 20px;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+
+        &--dot {
+            width: 15px;
+            height: 15px;
+            margin: 0 3px;
+            border-radius: 50%;
+            background: $green-five;
+            animation: pulse 1s infinite;
+            @keyframes pulse {
+                from {
+                    background-color: $green-one;
+                    opacity: 0;
+                }
+
+                to {
+                    opacity: 1;
+                }
+            }
+        }
+        &--border{
+            width: 85%;
+            height: 1px;
+            background-color: $green-two;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%)
+        }
+    }
+    &__counter{
+        position: absolute;
+        top: 70%;
+        left:0;
+        color:#fff;
+        font-size: 20px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+
+        &--number{
+            color: $green-five;
+        }
+    }
+}

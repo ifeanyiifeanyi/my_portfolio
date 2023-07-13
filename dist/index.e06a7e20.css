@@ -1,4 +1,6 @@
 @import "https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Aldrich&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap";
 * {
   box-sizing: border-box;
   margin: 0;
@@ -30,6 +32,135 @@ p, h1, h2, h3, h4, h5, h6 {
 
 img, video, canvas, svg {
   max-width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:after, :before {
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  font-family: Poppins, sans-serif;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+button, input, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+img, video, canvas, svg {
+  max-width: 100%;
+}
+
+.loader {
+  z-index: 100;
+  background: radial-gradient(circle at -8.9% 51.2%, #020024 0%, #090979 15.9%, #0b07e2 15.9%, #00000c 24.4%, #0b134f 24.5% 66%);
+  place-items: center;
+  width: 100%;
+  height: 100vh;
+  font-family: Aldrich, sans-serif;
+  display: grid;
+  position: fixed;
+  inset: 0;
+}
+
+.loader__box {
+  border: 3px solid #01460f;
+  border-color: #03811a #01460f #03c026;
+  width: 500px;
+  height: 200px;
+  position: relative;
+}
+
+.loader__bar {
+  background-color: #ccc;
+  border-radius: 2px;
+  width: 90%;
+  height: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.loader__bar--inner {
+  background-color: #6cff8d;
+  border-radius: 2px;
+  width: 50%;
+  height: 100%;
+}
+
+.loader__text {
+  color: #fff;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  font-size: 20px;
+  font-weight: 700;
+  display: flex;
+  position: relative;
+}
+
+.loader__text--dot {
+  background: #6cff8f;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  margin: 0 3px;
+  animation: 1s infinite pulse;
+}
+
+@keyframes pulse {
+  from {
+    opacity: 0;
+    background-color: #01460f;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.loader__text--border {
+  background-color: #03811a;
+  width: 85%;
+  height: 1px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.loader__counter {
+  color: #fff;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+  font-size: 20px;
+  display: flex;
+  position: absolute;
+  top: 70%;
+  left: 0;
+}
+
+.loader__counter--number {
+  color: #6cff8f;
 }
 
 /*# sourceMappingURL=index.e06a7e20.css.map */
