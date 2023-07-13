@@ -82,9 +82,31 @@ img, video, canvas, svg {
 .loader__box {
   border: 3px solid #01460f;
   border-color: #03811a #01460f #03c026;
+  border-radius: 2px;
   width: 500px;
   height: 200px;
+  animation: 1s infinite borderAnimation;
   position: relative;
+}
+
+@keyframes borderAnimation {
+  0% {
+    border-color: #01460f;
+  }
+
+  50% {
+    border-color: #03811a;
+  }
+
+  100% {
+    border-color: #03c026;
+  }
+}
+
+@media (width <= 600px) {
+  .loader__box {
+    width: 90vw;
+  }
 }
 
 .loader__bar {
@@ -101,7 +123,7 @@ img, video, canvas, svg {
 .loader__bar--inner {
   background-color: #6cff8d;
   border-radius: 2px;
-  width: 50%;
+  width: 0;
   height: 100%;
 }
 
@@ -114,6 +136,12 @@ img, video, canvas, svg {
   font-weight: 700;
   display: flex;
   position: relative;
+}
+
+@media (width <= 355px) {
+  .loader__text {
+    font-size: 17px;
+  }
 }
 
 .loader__text--dot {
@@ -161,6 +189,20 @@ img, video, canvas, svg {
 
 .loader__counter--number {
   color: #6cff8f;
+}
+
+.loader__width_animation {
+  animation: 1s forwards width_animation;
+}
+
+@keyframes width_animation {
+  0% {
+    width: 85%;
+  }
+
+  100% {
+    width: 250px;
+  }
 }
 
 /*# sourceMappingURL=index.e06a7e20.css.map */

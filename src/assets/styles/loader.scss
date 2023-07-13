@@ -18,9 +18,29 @@
         position: relative;
         width: 500px;
         height: 200px;
+        border-radius: 2px;
         border: 3px solid $green-one;
         border-top: 3px solid $green-two;
         border-bottom: 3px solid $green-three;
+        animation: borderAnimation 1s infinite;
+        @keyframes borderAnimation {
+            0% {
+                border-color: $green-one;
+            }
+            50% {
+                border-color: $green-two;
+            }
+            100% {
+                border-color: $green-three;
+            }
+        }
+        
+        @media(max-width: 600px){
+            &{
+                width: 90vw;
+            }
+        }
+        
     }
 
     &__bar {
@@ -35,7 +55,7 @@
 
         &--inner {
             height: 100%;
-            width: 50%;
+            width: 0;
             border-radius: 2px;
             background-color: $green-four;
         }
@@ -50,6 +70,11 @@
         align-items: center;
         justify-content: center;
         color: #fff;
+        @media(max-width: 355px){
+            &{
+                font-size: 17px;
+            }
+        }
 
         &--dot {
             width: 15px;
@@ -93,6 +118,17 @@
 
         &--number{
             color: $green-five;
+        }
+    }
+    &__width_animation{
+        animation: width_animation 1s forwards;
+        @keyframes width_animation{
+            0%{
+                width:85%;
+            }
+            100%{
+                width: 250px;
+            }
         }
     }
 }
