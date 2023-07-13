@@ -17,6 +17,7 @@ html, body {
 
 body {
   -webkit-font-smoothing: antialiased;
+  background-color: red;
   font-family: Poppins, sans-serif;
   font-weight: 600;
   line-height: 1.5;
@@ -50,6 +51,7 @@ html, body {
 
 body {
   -webkit-font-smoothing: antialiased;
+  background-color: red;
   font-family: Poppins, sans-serif;
   font-weight: 600;
   line-height: 1.5;
@@ -77,6 +79,12 @@ img, video, canvas, svg {
   display: grid;
   position: fixed;
   inset: 0;
+}
+
+@media (width <= 600px) {
+  .loader {
+    background: linear-gradient(-79deg, #020024 0%, #090979 15.9%, #0b07e2 15.9%, #020024 24.4%, #0b134f 24.5% 66%);
+  }
 }
 
 .loader__box {
@@ -203,6 +211,15 @@ img, video, canvas, svg {
   100% {
     width: 250px;
   }
+}
+
+.loader__svg {
+  opacity: 0;
+  width: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 /*# sourceMappingURL=index.e06a7e20.css.map */

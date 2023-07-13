@@ -13,6 +13,11 @@
     display: grid;
     place-items: center;
     font-family: 'Aldrich', sans-serif;
+    @media(max-width: 600px){
+        &{
+            background: linear-gradient(-79deg, #020024 0%, #090979 15.9%, #0b07e2 15.9%, #020024 24.4%, #0b134f 24.5%, #0b134f 66%);
+        }
+    }
 
     &__box {
         position: relative;
@@ -130,5 +135,13 @@
                 width: 250px;
             }
         }
+    }
+    &__svg{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 80%;
+        opacity:0;
     }
 }
