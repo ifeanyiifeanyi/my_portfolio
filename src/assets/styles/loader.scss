@@ -13,6 +13,7 @@
     display: grid;
     place-items: center;
     font-family: 'Aldrich', sans-serif;
+    display:none;   
     @media(max-width: 600px){
         &{
             background: linear-gradient(-79deg, #020024 0%, #090979 15.9%, #0b07e2 15.9%, #020024 24.4%, #0b134f 24.5%, #0b134f 66%);

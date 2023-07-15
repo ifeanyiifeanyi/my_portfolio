@@ -576,7 +576,8 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 },{}],"fxZy5":[function(require,module,exports) {
 var _baseScss = require("../styles/base.scss");
 var _loaderScss = require("../styles/loader.scss");
+var _landingScss = require("../styles/landing.scss");
 
-},{"../styles/base.scss":"bjuoM","../styles/loader.scss":"lXoSv"}],"bjuoM":[function() {},{}],"lXoSv":[function() {},{}]},["cIoJX","fxZy5"], "fxZy5", "parcelRequire2041")
+},{"../styles/base.scss":"bjuoM","../styles/loader.scss":"lXoSv","../styles/landing.scss":"aircJ"}],"bjuoM":[function() {},{}],"lXoSv":[function() {},{}],"aircJ":[function() {},{}]},["cIoJX","fxZy5"], "fxZy5", "parcelRequire2041")
 
 //# sourceMappingURL=index.3edf765f.js.map
